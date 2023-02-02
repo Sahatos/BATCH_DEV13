@@ -4,6 +4,7 @@ public class Calculator {
           system.debug('welcome to apex calc');
           printNewMessage('welcome welcome');
      }
+     // Parameter uytgedi
   
      public  static void printNewMessage(string msg){
           system.debug(msg);
