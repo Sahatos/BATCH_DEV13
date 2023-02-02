@@ -1,0 +1,16 @@
+// system.debug( ' Devran ' );
+// System.debug( ' Murat' );
+// String car = ' Toyota ';
+// system.debug( car );
+// String marka = ' Camry ';
+// system.debug( marka);
+// String color = ' Silver ';
+// system.debug( color);
+// String myCar = car + marka + color;
+// system.debug ( myCar );
+SalesforceDeveloperNazik yaz = new SalesforceDeveloperNazik();
+yaz.myFistCode();
+yaz.myFovorite();
+yaz.myPrint( ' Uzum ');
+yaz.cityinformartion();
+yaz.StringMethods();

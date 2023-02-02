@@ -1,0 +1,29 @@
+select id, name, Phone from account
+select id, name, subject__c, salesforce_project__r.project_name__c, salesforce_project__r.status__c from salesforce_ticket__c
+
+select id, name, project_name__c from Salesforce_Project__c
+
+SELECT Id, Name, Type, Industry FROM Account where industry = 'energy' LIMIT 1
+
+select id, name, project_name__c, status__c from Salesforce_Project__c where status__c != 'new'
+
+select id, name, phone, accountnumber from account where phone != null and accountnumber != null
+
+select id, name, phone, accountnumber, website from account where (phone != null or website !=null) and accountnumber != null
+
+
+select id, name, phone, accountnumber, AnnualRevenue, website from account where annualrevenue > 300000
+
+select id, name, phone, mailingcity from contact where mailingcity in ('Paris', 'burlington', 'lawrence')
+
+
+// parent to child
+select name, project_name__c,(select subject__c, priority__c, status__c from salesforce_tickets__r) from salesforce_project__c
+// count
+select count (name), leadsource from lead group by leadsource
+// sum
+select sum (amount), stagename from opportunity group by stagename
+
+select sum (amount), count(name), stagename from opportunity group by stagename
+// same name dublicate
+select name, count (id) from account group by name having count (id) > 1
